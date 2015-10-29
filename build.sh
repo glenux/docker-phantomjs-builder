@@ -3,8 +3,6 @@
 TARGET_DIR="$1"
 BUILD_DIR=$(mktemp -d)
 
-set -x
-
 echo "Downloading phantomjs..."
 cd "$BUILD_DIR"
 git clone git://github.com/ariya/phantomjs.git
