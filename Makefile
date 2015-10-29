@@ -4,6 +4,6 @@ configure:
 	docker build -t netcat-phantomjs-builder .
 
 build: configure
-	mkdir build
-	docker run -it netcat-phantomjs-builder -v build:/tmp/build
+	test ! -e build || mkdir -p build
+	docker run -it -v $(shell pwd)/build:/target netcat-phantomjs-builder 
 
