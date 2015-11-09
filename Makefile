@@ -10,5 +10,5 @@ build/phantomjs:
 build: build/phantomjs
 
 install: build
-	cp -a build/phantomjs /usr/local/bin/phantomjs
+	install --owner root --group root build/phantomjs /usr/local/bin/phantomjs
 
